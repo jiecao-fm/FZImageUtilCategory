@@ -19,10 +19,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "6.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source       = { :git => "https://github.com/jiecao-fm/FZImageUtilCategory.git", :tag => spec.version.to_s }
+  s.source       = { :git => "https://github.com/jiecao-fm/FZImageUtilCategory.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "FZImageUtilCategory/FZImageUtilCategory/**/*.*"
+  s.source_files  = "FZImageUtilCategory/**/*.*"
 
 end
