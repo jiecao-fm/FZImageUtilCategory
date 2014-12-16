@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 shannon. All rights reserved.
 //
 
-#import "UIImage+FZImageUtil.h"
+#import "UIImage+FZUtil.h"
 
-@implementation UIImage (FZImageUtil)
+@implementation UIImage (FZUtil)
 
 - (UIImage *)imageByScaleToWidth:(CGFloat )width {
     float newHeight = self.size.height / self.size.width * width;
@@ -43,5 +43,18 @@
     }
     return image;
 }
+
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
+    UIGraphicsBeginImageContext(size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, CGRectMake(0, 0, size.width, size.height));
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 
 @end

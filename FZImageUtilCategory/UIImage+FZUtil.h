@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface UIImage (FZImageUtil)
+@interface UIImage (FZUtil)
 
 /**
  Sacle image by width. Protect the original aspect ratio.
@@ -27,5 +27,10 @@
  2.Making thumbnail fill the "size" width takes precedence.
  */
 - (UIImage *)thumbnailRespectWidthOfSize:(CGSize)size;
+
+/**
+ Generate an image with single color.
+ */
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 
 @end

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB006EB61A3EEB5D00789080 /* UIImage+FZImageUtil.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB006EB51A3EEB5D00789080 /* UIImage+FZImageUtil.h */; };
-		FB006EB81A3EEB5D00789080 /* UIImage+FZImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FB006EB71A3EEB5D00789080 /* UIImage+FZImageUtil.m */; };
+		FB006EB61A3EEB5D00789080 /* UIImage+FZUtil.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB006EB51A3EEB5D00789080 /* UIImage+FZUtil.h */; };
+		FB006EB81A3EEB5D00789080 /* UIImage+FZUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FB006EB71A3EEB5D00789080 /* UIImage+FZUtil.m */; };
 		FB006EBE1A3EEB5D00789080 /* libFZImageUtilCategory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB006EB21A3EEB5D00789080 /* libFZImageUtilCategory.a */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +29,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				FB006EB61A3EEB5D00789080 /* UIImage+FZImageUtil.h in CopyFiles */,
+				FB006EB61A3EEB5D00789080 /* UIImage+FZUtil.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,8 +37,8 @@
 
 /* Begin PBXFileReference section */
 		FB006EB21A3EEB5D00789080 /* libFZImageUtilCategory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFZImageUtilCategory.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB006EB51A3EEB5D00789080 /* UIImage+FZImageUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+FZImageUtil.h"; sourceTree = "<group>"; };
-		FB006EB71A3EEB5D00789080 /* UIImage+FZImageUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FZImageUtil.m"; sourceTree = "<group>"; };
+		FB006EB51A3EEB5D00789080 /* UIImage+FZUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+FZUtil.h"; sourceTree = "<group>"; };
+		FB006EB71A3EEB5D00789080 /* UIImage+FZUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FZUtil.m"; sourceTree = "<group>"; };
 		FB006EBD1A3EEB5D00789080 /* FZImageUtilCategoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FZImageUtilCategoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB006EC31A3EEB5D00789080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,8 +83,8 @@
 		FB006EB41A3EEB5D00789080 /* FZImageUtilCategory */ = {
 			isa = PBXGroup;
 			children = (
-				FB006EB51A3EEB5D00789080 /* UIImage+FZImageUtil.h */,
-				FB006EB71A3EEB5D00789080 /* UIImage+FZImageUtil.m */,
+				FB006EB51A3EEB5D00789080 /* UIImage+FZUtil.h */,
+				FB006EB71A3EEB5D00789080 /* UIImage+FZUtil.m */,
 			);
 			path = FZImageUtilCategory;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB006EB81A3EEB5D00789080 /* UIImage+FZImageUtil.m in Sources */,
+				FB006EB81A3EEB5D00789080 /* UIImage+FZUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
