@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FZImageUtilCategory"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Some useful methods for UIImage, written in category. Like scaling, cropping."
 
   s.description  = <<-DESC

@@ -21,6 +21,17 @@
     return newImage;
 }
 
+- (UIImage *)imageByScaleToHeight:(CGFloat)height {
+    float newWidth = self.size.width / self.size.height * height;
+    //clean the last blank line
+    newWidth = (int)(newWidth * self.scale) / self.scale;
+    UIGraphicsBeginImageContextWithOptions((CGSize){newWidth, height}, false, self.scale);
+    [self drawInRect:CGRectMake(0, 0, newWidth, height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
 - (UIImage *)imageByCropWithRect:(CGRect)rect {
     //clean the last blank line
     rect.size.height = (int)(rect.size.height * self.scale) / self.scale;
@@ -47,6 +58,39 @@
     if (image.size.height > size.height) {
         image = [image imageByCropWithRect:(CGRect){0, 0, size.width, size.height}];
     }
+    return image;
+}
+
+- (UIImage *)thumbnailOfMaxSize:(CGSize)maxSize {
+    //who is taller
+    float maxRatio = maxSize.height / maxSize.width;
+    float selfRatio = self.size.height / self.size.width;
+    
+    UIImage *image;
+
+    //self is taller
+    if (selfRatio > maxRatio) {
+        //scale to the same width
+        if (self.size.width > maxSize.width) {
+            image = [self imageByScaleToWidth:maxSize.width];
+        } else {
+            maxSize.height = self.size.width / maxSize.width * maxSize.height;
+            maxSize.width = self.size.width;
+            image = self;
+        }
+    } else {
+        //scale to the same height
+        if (self.size.height > maxSize.height) {
+            image = [self imageByScaleToHeight:maxSize.height];
+        } else {
+            maxSize.width = self.size.height / maxSize.height * maxSize.width;
+            maxSize.height = self.size.height;
+            image = self;
+        }
+    }
+    
+    //crop center
+    image = [image imageByCropWithRect:(CGRect){(image.size.width - maxSize.width) / 2, (image.size.height - maxSize.height) / 2, maxSize.width, maxSize.height}];
     return image;
 }
 
